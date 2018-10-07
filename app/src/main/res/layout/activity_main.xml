@@ -56,6 +56,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="92dp" />
+
+        <Button
+            android:id="@+id/managmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원관리" />
     </LinearLayout>
 
 
