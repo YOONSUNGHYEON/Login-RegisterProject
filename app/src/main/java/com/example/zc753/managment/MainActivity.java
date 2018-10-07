@@ -1,5 +1,6 @@
 package com.example.zc753.managment;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -12,8 +13,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText idText = (EditText)findViewById(R.id.idText);
-        EditText passwordText = (EditText)findViewById(R.id.passwordText);
+        TextView idText = (TextView)findViewById(R.id.idText);
+        TextView passwordText = (TextView)findViewById(R.id.passwordText);
         TextView welcomeMessage = (TextView)findViewById(R.id.welcomeMessage);
+
+        Intent intent  = getIntent(); //인텐트값 받기
+        String userID = intent.getStringExtra("userID");
+        String userPassword = intent.getStringExtra("userPassword");
+        String message = "환영합니다, " + userID +"님!";
+
+
+        idText.setText(userID);
+        passwordText.setText(userPassword);
+        welcomeMessage.setText(message);
     }
 }
